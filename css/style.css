@@ -159,6 +159,7 @@ nav a:hover::after{
     font-weight:600;
 
     transition:.3s;
+    display: inline-block;
 
 }
 
@@ -243,7 +244,7 @@ nav a:hover::after{
 }
 
 .usluge-title {
-    margin-bottom: 40px;
+    margin-bottom: 10px;
     font-size: 28px;
     color: #1e293b;
 }
@@ -541,55 +542,92 @@ nav a:hover::after{
     background-color: #0066cc; /* Plava boja crtice */
 }
 
-/* Liste */
-.footer-info-list, .footer-check-list {
+.site-footer {
+    background-color: #f1f6fa;
+    color: #0f2c59;
+    padding-top: 50px;
+}
+
+/* Kontejner drži dve glavne kolone (Kontakt i Područje rada) u odnosu 50% - 50% */
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px 40px 20px;
+    gap: 10%; /* Veliki, čist razmak između dve glavne sekcije */
+}
+
+/* Obe glavne kolone su sada potpuno jednake veličine */
+.footer-column {
+    flex: 1;
+}
+
+/* Naslovi u kolonama */
+.column-title {
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 15px;
+    position: relative;
+    padding-bottom: 10px;
+    letter-spacing: 0.5px;
+}
+
+/* Plava linija ispod naslova */
+.column-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 40px;
+    height: 3px;
+    background-color: #0066cc;
+}
+
+/* Stil za levu listu (Kontakt) */
+.footer-info-list {
     list-style: none;
     margin-top: 25px;
 }
 
-.footer-info-list li, .footer-check-list li {
+.footer-info-list li {
     display: flex;
     align-items: center;
     margin-bottom: 15px;
     font-size: 16px;
 }
 
-/* Stilovi za ikonice */
 .footer-info-list li i {
     color: #0066cc;
     font-size: 18px;
-    width: 30px; /* Fiksna širina da bi tekst bio poravnat */
+    width: 30px;
 }
 
-.footer-check-list li i {
+/* KLJUČNI DEO: Lista lokacija se pretvara u GRID sa 2 kolone */
+.footer-check-list-grid {
+    list-style: none;
+    margin-top: 25px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Pravi tačno dve jednake kolone */
+    row-gap: 20px;    /* Razmak između redova (da se poklopi sa levom kolonom) */
+    column-gap: 20px; /* Razmak između leve i desne kolone lokacija */
+}
+
+.footer-check-list-grid li {
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+}
+
+.footer-check-list-grid li i {
     color: #0066cc;
     font-size: 18px;
     margin-right: 12px;
 }
 
-/* Područje rada specifičan raspored (Lista + Mapa) */
-.work-area-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    gap: 20px;
-}
-
-.footer-map {
-    flex-shrink: 0;
-}
-
-.footer-map img {
-    width: 250px;
-    height: 160px;
-    border-radius: 8px;
-    object-fit: cover;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-}
-
 /* Donja tamna traka */
 .footer-bottom {
-    background-color: #07162c; /* Jako tamno plava */
+    background-color: #07162c;
     color: #ffffff;
     padding: 15px 0;
     font-size: 14px;
@@ -600,14 +638,6 @@ nav a:hover::after{
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
+    align-items: flex-start;
     padding: 0 20px;
 }
-
-.footer-bottom p {
-    opacity: 0.8;
-}
-
-.footer-bottom strong {
-    opacity: 1;
-}
-
