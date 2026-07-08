@@ -174,7 +174,7 @@ nav a:hover::after{
 /*POCETNA*/
 .hero-section {
     /* Postavljamo sliku kao pozadinu cele sekcije */
-    background-image: url(../slike/proba.jpg);
+    background-image: url(../slike/pocetna.jpg);
     background-size: cover; /* Slika pokriva sve */
     background-position: center left; /* Fiksiramo sliku desno, da majstor uvek bude vidljiv */
     background-repeat: no-repeat;
