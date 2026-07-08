@@ -102,7 +102,7 @@ nav ul{
 nav a{
 
     text-decoration:none;
-    color:#334155;
+    color:#1e293b;
     font-weight:500;
 
     transition:.3s;
@@ -145,7 +145,7 @@ nav a:hover::after{
 
 /* BUTTON */
 
-.phone-btn,.btn-call,.btn-services{
+.phone-btn,.btn-call,.btn-services,.btn-usluge{
 
     text-decoration:none;
 
@@ -162,7 +162,7 @@ nav a:hover::after{
 
 }
 
-.phone-btn:hover,.btn-call:hover,.btn-services:hover{
+.phone-btn:hover,.btn-call:hover,.btn-services:hover,.btn-usluge:hover{
 
     background:#1d4ed8;
 
@@ -208,14 +208,14 @@ nav a:hover::after{
 /* Stilizacija elemenata unutar teksta (isto kao pre) */
 .hero-text-block h1 {
     font-size: 2.5rem;
-    color: #334155; 
+    color: #1e293b; 
     margin-bottom: 20px;
     
     line-height: 1.2;
 }
 
 .hero-text-block p {
-    color: #334155;
+    color: #1e293b;
     margin-bottom: 30px;
     font-size: 1.1rem;
     line-height: 1.5;
@@ -231,10 +231,68 @@ nav a:hover::after{
 .hero-features {
     display: flex;
     gap: 20px;
-    font-size: 1rem;
-    color: #334155;
+    font-size: 1.1rem;
+    color: #1e293b;
     flex-wrap: wrap;
 }
 
+.usluge-container {
+    padding: 50px 20px;
+    text-align: center;
+    font-family: Arial, sans-serif;
+}
 
+.usluge-title {
+    margin-bottom: 40px;
+    font-size: 28px;
+    color: #1e293b;
+}
 
+.usluge-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.usluga-card {
+    border: 1px solid #eee;
+    padding: 30px;
+    border-radius: 10px;
+    transition: transform 0.3s;
+}
+
+.usluga-card:hover {
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.icon-placeholder {
+    font-size: 40px;
+    margin-bottom: 15px;
+    color: #0056b3;
+}
+
+.usluga-card h3 {
+    margin: 10px 0;
+    font-size: 18px;
+}
+
+.usluga-card p {
+    font-size: 14px;
+    color: #1e293b;
+}
+
+.button-container {
+    margin-top: 40px;
+}
+
+/*.btn-usluge {
+    background-color:#2563eb;
+    color: white;
+    padding: 15px 30px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+*/
