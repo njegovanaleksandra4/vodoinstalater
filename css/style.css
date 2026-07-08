@@ -500,3 +500,114 @@ nav a:hover::after{
     margin: 0;
   }
 
+.site-footer {
+    background-color: #f1f6fa; /* Svetlo plava pozadina iznad */
+    color: #0f2c59; /* Tamno plava boja teksta */
+    padding-top: 50px;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px 40px 20px;
+    gap: 50px;
+}
+
+/* Kolone */
+.footer-column {
+    flex: 1;
+}
+
+/* Naslovi u kolonama */
+.column-title {
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 15px;
+    position: relative;
+    padding-bottom: 10px;
+    letter-spacing: 0.5px;
+}
+
+/* Plava linija ispod naslova */
+.column-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 40px;
+    height: 3px;
+    background-color: #0066cc; /* Plava boja crtice */
+}
+
+/* Liste */
+.footer-info-list, .footer-check-list {
+    list-style: none;
+    margin-top: 25px;
+}
+
+.footer-info-list li, .footer-check-list li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    font-size: 16px;
+}
+
+/* Stilovi za ikonice */
+.footer-info-list li i {
+    color: #0066cc;
+    font-size: 18px;
+    width: 30px; /* Fiksna širina da bi tekst bio poravnat */
+}
+
+.footer-check-list li i {
+    color: #0066cc;
+    font-size: 18px;
+    margin-right: 12px;
+}
+
+/* Područje rada specifičan raspored (Lista + Mapa) */
+.work-area-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.footer-map {
+    flex-shrink: 0;
+}
+
+.footer-map img {
+    width: 250px;
+    height: 160px;
+    border-radius: 8px;
+    object-fit: cover;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+/* Donja tamna traka */
+.footer-bottom {
+    background-color: #07162c; /* Jako tamno plava */
+    color: #ffffff;
+    padding: 15px 0;
+    font-size: 14px;
+}
+
+.footer-bottom-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
+}
+
+.footer-bottom p {
+    opacity: 0.8;
+}
+
+.footer-bottom strong {
+    opacity: 1;
+}
+
