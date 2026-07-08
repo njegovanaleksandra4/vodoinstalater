@@ -1,0 +1,84 @@
+@media (max-width: 1100px) {
+    .menu-toggle {
+        display: block;
+    }
+
+    /* Prilagođavanje visine zaglavlja */
+    header .container {
+        height: 75px;
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        padding: 0 20px; /* Daje malo prostora sa strana u zaglavlju */
+    }
+
+    /* SMANJUJEMO LOGO DA SVE STANE */
+    .logo-icon {
+        width: 45px;
+        height: 45px;
+        font-size: 20px;
+    }
+    .logo-text h2 {
+        font-size: 19px;
+    }
+    .logo-text p {
+        font-size: 12px;
+    }
+    
+    /* REŠENJE ZA PROBLEM: Potpuno sakrivamo gornje dugme za poziv na mobilnom */
+    header .container .phone-btn {
+        display: none !important;
+    }
+
+    /* --- MOBILNI MENI --- */
+    nav {
+        position: fixed;
+        top: 75px; /* Seda tačno ispod zaglavlja */
+        left: 0;
+        width: 100%;
+        height: calc(100vh - 75px);
+        background: #fff;
+        z-index: 1000;
+        
+        /* Promena kontrole prikaza: umesto desno, inicijalno je sakriven */
+        display: none; 
+        flex-direction: column;
+        box-sizing: border-box;
+    }
+
+    /* Kada je aktivan, prikazujemo ga kao flex */
+    nav.active {
+        display: flex;
+    }
+
+    /* Lista linkova */
+    nav ul {
+        flex-direction: column;
+        gap: 0;
+        width: 100%;
+    }
+
+    nav li {
+        width: 100%;
+        border-bottom: 1px solid #f1f5f9;
+    }
+
+    nav a {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        padding: 18px 25px;
+        font-size: 16px;
+        width: 100%;
+    }
+
+    /* Sklanjamo desktop liniju na hover */
+    nav a::after {
+        display: none;
+    }
+
+
+
+}

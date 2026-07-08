@@ -142,7 +142,19 @@ nav a:hover::after{
     width:100%;
 
 }
-
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 30px;
+    color: #1e293b;
+    cursor: pointer;
+    z-index: 1001; /* Da uvek bude iznad svega */
+}
+/* Sakrivamo mobilno dugme na desktopu */
+.phone-btn-mobile {
+    display: none;
+}
 /* BUTTON */
 
 .phone-btn,.btn-call,.btn-services,.btn-usluge{
