@@ -368,6 +368,26 @@ nav a::after{
     font-size: 14px;
     color: #555555;
   }
+   .footer-container {
+        flex-direction: column;
+        gap: 40px;
+    }
+    
+    .work-area-content {
+        flex-direction: column;
+        gap: 25px;
+    }
+    
+    .footer-map img {
+        width: 100%; /* Mapa zauzima punu širinu na telefonu */
+        height: auto;
+    }
+
+    .footer-bottom-container {
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+    }
 
 
 }
