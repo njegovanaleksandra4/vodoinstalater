@@ -378,10 +378,7 @@ nav a::after{
         gap: 25px;
     }
     
-    .footer-map img {
-        width: 100%; /* Mapa zauzima punu širinu na telefonu */
-        height: auto;
-    }
+   
 
     .footer-bottom-container {
         flex-direction: column;
