@@ -142,18 +142,16 @@ nav a:hover::after{
     width:100%;
 
 }
-.menu-toggle {
+.mobile-phone-btn{
     display: none;
-    background: none;
-    border: none;
-    font-size: 30px;
-    color: #1e293b;
-    cursor: pointer;
-    z-index: 1001; /* Da uvek bude iznad svega */
 }
-/* Sakrivamo mobilno dugme na desktopu */
-.phone-btn-mobile {
-    display: none;
+.menu-btn{
+    display:none;
+    font-size:34px;
+    cursor:pointer;
+    color:#1e293b;
+    user-select:none;
+    z-index:1002;
 }
 /* BUTTON */
 
@@ -182,6 +180,28 @@ nav a:hover::after{
     transform:translateY(-2px);
 
     box-shadow:0 10px 20px rgba(37,99,235,.25);
+
+}
+.overlay{
+
+    position:fixed;
+
+    inset:0;
+
+    background:rgba(0,0,0,.45);
+
+    opacity:0;
+    visibility:hidden;
+
+    transition:.3s;
+
+    z-index:999;
+}
+
+.overlay.active{
+
+    opacity:1;
+    visibility:visible;
 
 }
 /*POCETNA*/
