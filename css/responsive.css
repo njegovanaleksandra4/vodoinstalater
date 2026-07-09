@@ -291,4 +291,33 @@ nav a::after{
         padding: 16px 20px;
     }
 
+    /*CENOVNIK*/
+    .cenovnik-section {
+        padding: 40px 15px; /* Manji razmak na vrhu i dnu na mobilnom */
+    }
+
+    .cenovnik-container {
+        flex-direction: column; /* Slika i tabela idu jedno ispod drugog */
+        gap: 25px;
+    }
+
+    .cenovnik-content {
+        min-width: 100%; /* Tabela zauzima punu širinu ekrana */
+    }
+
+    .tabela-wrapper {
+        padding: 15px 15px; /* Smanjen padding unutar bele kutije da stane na manje ekrane */
+    }
+
+    .cenovnik-tabela td {
+        padding: 10px 0; /* Malo zbijeniji redovi radi bolje preglednosti */
+        font-size: 14px; /* Blago smanjen font za mobilne telefone */
+    }
+
+    /* Sakrivanje slike na mobilnim ekranima */
+    .cenovnik-slika-box {
+        display: none;
+    }
+
+
 }
