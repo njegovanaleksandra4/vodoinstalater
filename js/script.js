@@ -12,6 +12,7 @@ menuBtn.addEventListener("click",()=>{
         document.body.style.overflow = 'hidden';
     }else{
         menuBtn.innerHTML="☰";
+        document.body.style.overflow = '';
     }
 
 });
@@ -21,6 +22,7 @@ overlay.addEventListener("click",()=>{
     nav.classList.remove("active");
     overlay.classList.remove("active");
     menuBtn.innerHTML="☰";
+    document.body.style.overflow = '';
 
 });
 /*Gasenje menija kad se klikne na link */
@@ -31,6 +33,7 @@ links.forEach(link=>{
         nav.classList.remove("active");
         overlay.classList.remove("active");
         menuBtn.innerHTML="☰";
+        document.body.style.overflow = '';
 
     });
    

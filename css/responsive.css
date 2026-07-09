@@ -105,5 +105,103 @@ nav a::after{
 
     box-shadow:0 10px 20px rgba(37,99,235,.25);
 }
+/*POCETNA*/
+/* 1. Glavna sekcija prelazi u vertikalni raspored */
+    .hero-section {
+        display: flex;
+        flex-direction: column;
+        grid-template-columns: none; /* Resetujemo grid sa desktopa */
+        /* Pomeramo sliku desno da se majstor vidi i dodajemo blagi beli preliv sa leve strane zbog čitljivosti */
+        background-image: linear-gradient(to right, rgba(255, 255, 255, 0.9) 30%, rgba(255, 255, 255, 0.2) 100%), url(../slike/pocetna.jpg);
+        background-position: right center;
+        min-height: auto; /* Dozvoljavamo da visina bude prirodna */
+    }
+
+    /* 2. Prilagođavanje tekstualnog bloka */
+    .hero-text-block {
+        padding: 40px 20px 20px 20px; /* Smanjujemo padding za mobilni */
+        margin-bottom: 0;
+    }
+
+    .hero-text-block h1 {
+        font-size: 1.8rem; /* Smanjujemo veličinu naslova */
+        margin-bottom: 15px;
+    }
+
+    .hero-text-block p {
+        font-size: 0.95rem;
+        margin-bottom: 25px;
+    }
+
+    /* 3. Dugmići jedan ispod drugog i preko cele širine */
+    .hero-buttons {
+        display: flex;
+        flex-direction: column; /* Ređanje jedno ispod drugog */
+        align-items: center; /* Centriramo dugmad horizontalno u bloku */
+        gap: 12px;
+        margin-bottom: 30px;
+        width: 100%;
+    }
+
+    /* Zajednički stilovi za dugmiće na mobilnom */
+    .hero-buttons .btn {
+        display: inline-block;
+        width: 100%;
+        text-align: center;
+        
+        padding: 14px;
+        box-sizing: border-box;
+        max-width: 280px;
+        background-color: #0056b3; /* Jača plava sa slike */
+        color: white;
+        border: 2px solid #0056b3;
+        border-radius: 50px;
+    }
+
+    
+    
+   .hero-buttons .btn:hover{
+        background-color: #0056b3;
+        
+        border-color: #0056b3;
+        transform: translateY(-2px);
+        box-shadow: 0 10px 20px rgba(37,99,235,.25);
+   }
+
+    /* 4. Tri ikonice na dnu (bela pozadina ispod sekcije) */
+    .hero-features {
+        display: flex;
+        flex-direction: row; /* Ostaju u jednom redu */
+        justify-content: space-between;
+        align-items: flex-start;
+        background-color: #ffffff; /* Bela pozadina kao na slici */
+        padding: 20px 10px;
+        margin: 0 -20px -20px -20px; /* Poništavamo padding roditelja da ide od ivice do ivice */
+        gap: 10px;
+    }
+
+    /* Pojedinačna ikonica/stavka */
+    .hero-features span {
+        display: flex;
+        flex-direction: column; /* Ikonica ide IZNAD teksta */
+        align-items: center;
+        text-align: center;
+        flex: 1;
+        font-size: 0.85rem; /* Smanjen tekst da sve stane */
+        font-weight: 500;
+        color: #1e293b;
+    }
+
+    /* Stilizacija samih font-awesome ikonica */
+    .hero-features span i {
+        font-size: 1.4rem;
+        margin-bottom: 8px;
+        color: #2563eb; /* Plave ikonice */
+    }
+    
+    /* Sakrivamo četvrtu ikonicu ako ne staje ili ako želite tačno kao na slici (3 ikonice) */
+    .hero-features span:nth-child(4) {
+        display: none;
+    }
 
 }
