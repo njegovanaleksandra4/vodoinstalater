@@ -152,7 +152,7 @@ nav a::after{
         padding: 14px;
         box-sizing: border-box;
         max-width: 280px;
-        background-color: #0056b3; /* Jača plava sa slike */
+        background-color: #0056b3; 
         color: white;
         border: 2px solid #0056b3;
         border-radius: 50px;
@@ -202,6 +202,93 @@ nav a::after{
     /* Sakrivamo četvrtu ikonicu ako ne staje ili ako želite tačno kao na slici (3 ikonice) */
     .hero-features span:nth-child(4) {
         display: none;
+    }
+
+    /*USLUGEE*/
+    .usluge-container {
+        padding: 30px 15px;
+        background-color: #f8fafc; /* Blago siva pozadina da bele kartice iskoče */
+    }
+
+    /* Grid prebacujemo u jednu kolonu */
+    .usluge-grid {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    /* Kartica postaje "row" (red) umesto "column" (stubac) */
+    .usluga-card {
+        display: flex;
+        align-items: center; /* Centrira ikonu i tekst vertikalno */
+        text-align: left; /* Poravnanje teksta ulevo kao na slici */
+        padding: 20px;
+        background: #ffffff;
+        border: 1px solid #e2e8f0;
+        border-radius: 12px;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+    }
+
+    /* Isključujemo hover transformaciju na mobilnom jer nema kursora */
+    .usluga-card:hover {
+        transform: none;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+    }
+
+    /* Stilizovanje prostora za ikonicu (okrugli oblik sa slike) */
+    .icon-placeholder {
+        flex-shrink: 0; /* Sprečava da se ikona skupi ako ima puno teksta */
+        width: 60px;
+        height: 60px;
+        background-color: #eff6ff; /* Svetlo plava pozadina iza ikone */
+        border-radius: 50%; /* Pravi krug */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 0; /* Sklanjamo donju marginu jer je sada pored teksta */
+        margin-right: 20px; /* Razmak između ikone i teksta */
+        font-size: 24px; /* Malo smanjujemo veličinu ikone da stane u krug */
+    }
+    .usluga-tekst {
+        display: flex;
+        flex-direction: column; /* Slaže naslov iznad opisa */
+        align-items: flex-start; /* Poravnava sav tekst ulevo */
+        flex: 1; /* Omogućava kontejneru da zauzme sav preostali prostor desno od ikone */
+        min-width: 0; /* Sprečava tekst da "gura" ivice kartice */
+    }
+
+    /* Grupisanje teksta radi lakšeg pozicioniranja */
+    .usluga-card h3 {
+        margin: 0 0 4px 0;
+        font-size: 16px;
+        color: #1e293b;
+        font-weight: 700;
+        display: block; /* Osigurava da se ponaša kao zaseban red */
+        width: 100%;
+    }
+
+    .usluga-card p {
+        margin: 0;
+        font-size: 13px;
+        color: #64748b; /* Malo svetlija siva za opis, radi boljeg kontrasta */
+        line-height: 1.4;
+        display: block; /* Osigurava da se ponaša kao zaseban red */
+        width: 100%;
+    }
+
+    /* Dugme na dnu prilagođeno širini ekrana kao na levoj slici */
+    .button-container {
+        margin-top: 30px;
+        padding: 0 5px;
+    }
+
+    .btn-usluge {
+        display: block; /* Da bi zauzelo punu širinu */
+        width: 100%;
+        box-sizing: border-box;
+        text-align: center;
+        border-radius: 8px; /* Četvrtastije dugme, nalik onom na slici */
+        padding: 16px 20px;
     }
 
 }
