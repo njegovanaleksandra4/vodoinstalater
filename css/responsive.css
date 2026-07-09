@@ -319,5 +319,55 @@ nav a::after{
         display: none;
     }
 
+    /*ZASTO IZABRATI NAS*/
+    .kartice-kontejner {
+    flex-direction: column;
+    align-items: center; /* Centriramo ceo blok na sredinu ekrana */
+    gap: 0; 
+    padding: 0 20px;
+    max-width: 480px; /* Ograničavamo širinu na mobilnom da ne ide od ivice do ivice na tabletima */
+    margin: 0 auto;
+  }
+
+  .kartica {
+    flex-direction: row; /* Ikonica levo, tekst desno */
+    align-items: center; /* Vertikalno centriranje ikonice i teksta */
+    text-align: left;
+    max-width: 100%;
+    width: 100%;
+    padding: 20px 0;
+    border-bottom: 1px solid #e2e8f0; /* Linija sa slike */
+  }
+
+  .kartica:last-child {
+    border-bottom: none; /* Sklanjamo liniju ispod poslednje kartice */
+  }
+
+  .kartica-ikonica {
+    font-size: 32px;
+    margin-bottom: 0; /* Poništavamo desktop marginu */
+    margin-right: 20px; /* Razmak između ikonice i teksta */
+    width: 45px;
+    flex-shrink: 0; /* Ne dozvoljava ikonici da se skupi */
+    display: flex;
+    justify-content: center;
+  }
+
+  .kartica-sadrzaj {
+    display: flex;
+    flex-direction: column; /* Naslov iznad teksta na desnoj strani */
+    gap: 4px;
+  }
+
+  .kartica-naslov {
+    font-size: 16px;
+    margin-bottom: 0;
+  }
+
+  .kartica-tekst {
+    font-size: 14px;
+    color: #555555;
+  }
+
 
 }
