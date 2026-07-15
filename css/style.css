@@ -67,25 +67,14 @@ header .container{
 
     width:auto;
     height:55px;
-  
-
     border-radius:50%;
-
-   
-
     display:flex;
     justify-content:center;
     align-items:center;
-
-    
-    
-
+    object-fit: contain;
+    background: white;
 }
-.logo-img {
-    height: 55px; /* Dajemo joj istu visinu koju je imao i stari krug */
-    width: auto;  /* Širina će se automatski prilagoditi da se slika ne deformiše */
-    object-fit: contain; /* Osigurava da se slika lepo uklopi bez sečenja */
-}
+
 
 .logo-text h2{
 
