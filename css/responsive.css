@@ -287,7 +287,7 @@ nav a::after{
         width: 100%;
         box-sizing: border-box;
         text-align: center;
-        border-radius: 8px; /* Četvrtastije dugme, nalik onom na slici */
+        border-radius: 50px; /* Četvrtastije dugme, nalik onom na slici */
         padding: 16px 20px;
     }
 
@@ -309,9 +309,15 @@ nav a::after{
         padding: 15px 15px; /* Smanjen padding unutar bele kutije da stane na manje ekrane */
     }
 
-    .cenovnik-tabela td {
-        padding: 10px 0; /* Malo zbijeniji redovi radi bolje preglednosti */
-        font-size: 14px; /* Blago smanjen font za mobilne telefone */
+    .kontakt-buttons {
+    flex-direction: column;
+    gap: 12px;
+    }
+
+    .btn-kontakt {
+    width: 100%; /* Dugmići se šire od ivice do ivice kutije */
+    box-sizing: border-box; /* Sprečava da dugme "izađe" van bele kutije */
+    border-radius: 50px;
     }
 
     /* Sakrivanje slike na mobilnim ekranima */

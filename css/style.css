@@ -465,6 +465,97 @@ nav a:hover::after{
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.05);
     object-fit: cover; /* Sprečava deformaciju slike */
 }
+/* --- Novi stilovi za tekst o transparentnosti i dugmiće --- */
+
+.transparentnost-tekst h3 {
+    font-size: 18px;
+    font-weight: 600;
+    color: #0056b3;
+    margin-bottom: 12px;
+}
+
+.transparentnost-tekst p {
+    font-size: 15px;
+    line-height: 1.6;
+    color: #475569;
+    margin-bottom: 15px;
+}
+
+.prednosti-lista {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 25px 0;
+}
+
+.prednosti-lista li {
+    font-size: 15px;
+    color: #1e293b;
+    margin-bottom: 10px;
+    position: relative;
+    padding-left: 25px;
+}
+
+/* Zeleni checkmark (štiklirano) ispred prednosti */
+.prednosti-lista li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: #22c55e;
+    font-weight: bold;
+}
+
+/* Kontejner za dugmiće */
+.kontakt-buttons {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap; /* Da se na mobilnom lepo prebace jedno ispod drugog */
+}
+
+/* Osnovni stil za oba dugmeta */
+.btn-kontakt {
+    flex: 1;
+    min-width: 160px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 14px 20px;
+    border-radius: 50px;
+    font-size: 16px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+/* Specifično za Poziv (Plava boja) */
+.btn-poziv {
+    background-color: #0056b3;
+    color: #ffffff;
+}
+
+.btn-poziv:hover {
+    background-color: #004085;
+    transform: translateY(-2px);
+}
+
+/* Specifično za Viber (Ljubičasta boja) */
+.btn-viber {
+    background-color: #7360f2;
+    color: #ffffff;
+}
+
+.btn-viber:hover {
+    background-color: #5b4bc4;
+    transform: translateY(-2px);
+}
+
+.btn-ikonica {
+    font-size: 18px;
+}
+
+
+
 
 .zasto-izabrati-nas {
     font-family: 'Poppins', sans-serif;
